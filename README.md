@@ -49,6 +49,6 @@ And this command for pushtotalk:
 # Information about my code
 
 My code is not perfect because it is using the [speechrecognition](https://pypi.org/project/SpeechRecognition/) and it has some delays between 
-the sound recodings to detect the hotword. Also it can only be triggered with the "OK Google" command and not with "Hey Google" one. Over all after some tests it does a very good job in detecting the word and it only needs to say it one or twice. I have added a little sound effect to make sure that the assistant hears you. You can check the code yourself or modify it to make it even better!
+the sound recodings to detect the hotword. Also it can only be triggered with the "OK Google" command and not with "Hey Google" one. Over all after some tests it does a very good job in detecting the word and it only needs to say it once or twice. I have added a little sound effect to make sure that the assistant hears you. You can check the code yourself or modify it to make it even better!
 
 
