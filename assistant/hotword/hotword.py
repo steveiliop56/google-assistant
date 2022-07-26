@@ -333,7 +333,7 @@ def main(api_endpoint, credentials, verbose,
                     text = r.recognize_google(audio)
                     print("You said " + text + ".")
                     if text == "Ok Google" or text == "Ok google" or text == "ok Google" or text == "ok google" or text == "OK Google":
-                        playsound("response.wav")
+                        playsound("~/google-assistant/env/lib/python3.9/site-packages/googlesamples/assistant/hotword/response.wav")
                         assistant.converse()
                     
                 except sr.UnknownValueError:
