@@ -8,12 +8,47 @@ So I decided to make my own speech to text trigger with the [SpeechRecognition](
 
 # Installation 
 
-First of all register the device with this [tutorial](https://developers.google.com/assistant/sdk/guides/service/python), make sure to add your email as a test user in order to work. Follow until the step 4. After that you need to clone this repository `git clone https://github.com/raspberrypi5621/google-assisant.git` after change directory inside the assistant with `cd google-assisant/assistant` and continue with the step 5 but without running `python3 -m venv env`. And follow the steps until the end. Last but not least upgrade all the packages in the virtual environment with `pip3 freeze > upgrade.txt && pip3 install --upgrade -r upgrade.txt`. When running `googlesamples-assistant-pushtotalk` do not use any extra parameters like `--device-id` or `--project-id`.
+First of all make the basic installation of google assistant with this [tutorial](https://developers.google.com/assistant/sdk/guides/service/python), make sure to add your email as a test user in order to work.
+
+# Fix and modify the code
+
+Now it's time to fix some code bugs and modify the code for hotword detection. First of all
+we need to downgrade protobuf and upgrade tenacity with these commands (make sure you are in the virtual enviroment):
+
+```
+pip3 install --upgrade tenacity
+pip3 install protobuf==3.20
+```
+
+Then you need to edit the file in env/bin/googlesamples-assistant-hotword and change this line `from googlesamples.assistant.library.hotword import main` to this line `from googlesamples.assistant.hotword.hotword import main`.
+
+After that open this file env/bin/googlesamples-assistant-hotword and change this line `from googlesamples.assistant.grpc.pushtotalk import main` this line `from googlesamples.assistant.pushtotalk.pushtotalk import main`.
+
+Last but not least copy the two directories from the [assistant]() direcory in my repository to env/lib/python3.9/site-packages/googlesamples/assistant. But make sure to delete all the contens before doing so.
+
+Now we are ready to run the code but before doing it we need to install some dependencies with these commands (inside the env):
+
+```
+pip3 install speechrecognition
+pip3 install pyaudio
+pip3 install playsound
+```
+
+And you are done!
 
 # Run the code
 
-I will have a redy to run google-assistant-sdk in the repository. To run the assistant run the following command in the venv (enable with `source env/bin/activate` inside the assistant directory):
+To run the code just enable the virtual enviroment with this command `source env/bin/activate`inside your google assistant directory.
 
-`googlesamples-assistant-hotword` (modified hotword detection)
+Now you can run this command for word detection:
+`googlesamples-assistant-hotword` 
+
+And this command for pushtotalk:
+`googlesamples-assistant-pushtotalk`
+
+# Information about my code
+
+My code is not perfect because it is using the [speechrecognition](https://pypi.org/project/SpeechRecognition/) and it has some delays between 
+the sound recodings to detect the hotword. Also it can only be triggered with the "OK Google" command and not with "Hey Google" one. Over all after some tests it does a very good job in detecting the word and it only needs to say it one or twice. I have added a little sound effect to make sure that the assistant hears you. You can check the code yourself or modify it to make it even better!
 
 
