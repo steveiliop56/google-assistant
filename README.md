@@ -24,7 +24,7 @@ Then you need to edit the file in env/bin/googlesamples-assistant-hotword and ch
 
 After that open this file env/bin/googlesamples-assistant-pushtotalk and change this line `from googlesamples.assistant.grpc.pushtotalk import main` this line `from googlesamples.assistant.pushtotalk.pushtotalk import main`.
 
-Last but not least copy the two directories from the [assistant]() direcory in my repository to env/lib/python3.9/site-packages/googlesamples/assistant. But make sure to delete all the contens before doing so.
+Last but not least copy the two directories from the [assistant](https://github.com/raspberrypi5621/google-assistant/tree/main/assistant) direcory in my repository to env/lib/python3.9/site-packages/googlesamples/assistant. But make sure to delete all the contens before doing so.
 
 Now we are ready to run the code but before doing it we need to install some dependencies with these commands (inside the env):
 
