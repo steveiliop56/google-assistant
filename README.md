@@ -8,7 +8,7 @@ So I decided to make my own speech to text trigger with the [SpeechRecognition](
 
 # Installation 
 
-First of all make the basic installation of google assistant with this [tutorial](https://developers.google.com/assistant/sdk/guides/service/python), make sure to add your email as a test user in order to work.
+First of all make the basic installation of google assistant in your home directory (go to home directory with this command `cd ~`) with this [tutorial](https://developers.google.com/assistant/sdk/guides/service/python), make sure to add your email as a test user in order to work.
 
 # Fix and modify the code
 
