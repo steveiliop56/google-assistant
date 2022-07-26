@@ -8,7 +8,7 @@ So I decided to make my own speech to text trigger with the [SpeechRecognition](
 
 # Installation 
 
-First of all register the device with this [tutorial](https://developers.google.com/assistant/sdk/guides/service/python). Follow until the step 4. After that you need to clone this repository `git clone https://github.com/raspberrypi5621/google-assisant.git` after change directory inside the assistant with `cd google-assisant/assistant` and continue with the step 5 but without running `python3 -m venv env`. And follow the steps until the end. Last but not least upgrade all the packages in the virtual environment with `pip3 freeze > upgrade.txt && pip3 install --upgrade -r upgrade.txt`. 
+First of all register the device with this [tutorial](https://developers.google.com/assistant/sdk/guides/service/python), make sure to add your email as a test user in order to work. Follow until the step 4. After that you need to clone this repository `git clone https://github.com/raspberrypi5621/google-assisant.git` after change directory inside the assistant with `cd google-assisant/assistant` and continue with the step 5 but without running `python3 -m venv env`. And follow the steps until the end. Last but not least upgrade all the packages in the virtual environment with `pip3 freeze > upgrade.txt && pip3 install --upgrade -r upgrade.txt`. When running `googlesamples-assistant-pushtotalk` do not use any extra parameters like `--device-id` or `--project-id`.
 
 # Run the code
 
