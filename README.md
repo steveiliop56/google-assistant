@@ -12,7 +12,7 @@ First of all register the device with this [tutorial](https://developers.google.
 
 # Run the code
 
-I will have a redy to run google-assistant-sdk in the repository. To run the assistant run the following command in the venv (enable with `source env/bin/activate` inside the assistant directory:
+I will have a redy to run google-assistant-sdk in the repository. To run the assistant run the following command in the venv (enable with `source env/bin/activate` inside the assistant directory):
 
 `googlesamples-assistant-hotword` (modified hotword detection)
 
