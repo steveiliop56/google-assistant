@@ -35,7 +35,7 @@ And you are done!
 
 # Run the code
 
-To run the code just enable the virtual enviroment with this command `source env/bin/activate`inside your google assistant directory.
+To run the code just enable the virtual enviroment with this command `source env/bin/activate` inside your google assistant directory and then type `cd env/bin'.
 
 Now you can run this command for word detection:
 `googlesamples-assistant-hotword` 
